@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "장군",
+    "image_url": "https://cdn.pixabay.com/photo/2017/07/25/04/14/great-pyrenees-2536899_1280.jpg",
+    "text": "덩치가 큰 장군이입니다."
+  },
+  {
+    "id": 2,
+    "name": "복실",
+    "image_url": "https://cdn.pixabay.com/photo/2022/03/14/13/51/dog-7068245_1280.png",
+    "text": "귀엽고 애교많은 복실입니다."
+  },
+  {
+    "id": 3,
+    "name": "뭉치",
+    "image_url": "https://cdn.pixabay.com/photo/2019/04/18/20/47/dog-4138085_1280.jpg",
+    "text": "사고뭉치 뭉치입니다."
+  },
+  {
+    "id": 4,
+    "name": "체리",
+    "image_url": "https://cdn.pixabay.com/photo/2018/06/19/21/38/dog-3485290_1280.jpg",
+    "text": "안녕하세요 체리에요."
+  },
+  {
+    "id": 5,
+    "name": "민슥",
+    "image_url": "https://cdn.pixabay.com/photo/2019/02/24/12/56/maltese-4017521_1280.jpg",
+    "text": "안녕하세요 최민슥입니다."
+  }
+]

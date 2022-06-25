@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import BannerText from "./component/BannerText";
 
+import MainCarousel from "./component/MainCarousel";
+
 const Main = () => {
   return (
     <MainWrapper>
@@ -11,6 +13,8 @@ const Main = () => {
       ></img>
 
       <BannerText />
+
+      <MainCarousel />
     </MainWrapper>
   );
 };

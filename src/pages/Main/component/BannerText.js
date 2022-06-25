@@ -27,7 +27,7 @@ const TextWrapper = styled.div`
 const DetailBtn = styled.button`
   color: white;
   background-color: #9450e7;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 30px;
   cursor: pointer;
 `;
