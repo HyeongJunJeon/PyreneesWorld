@@ -6,7 +6,7 @@ const Commnet = () => {
   const [comment, setComment] = useState("");
   const [feedComments, setFeedComments] = useState([]);
 
-  const post = (e) => {
+  const post = () => {
     const copyFeedComments = [...feedComments];
     copyFeedComments.push(comment);
     setFeedComments(copyFeedComments);
@@ -59,7 +59,6 @@ const UserName = styled.p`
   font-size: 15px;
 `;
 
-const CommentText = styled.p`
-  font-size: 15px;
+const CommentText = styled(UserName)`
   margin-left: 50px;
 `;

@@ -8,7 +8,7 @@ const BannerText = () => {
         그레이트 피레니즈는 초대형 견종으로
         <br /> 몸길이 160~180cm, 키 65~82cm,몸무게 41~80kg 정도에요. 정말 크죠?
       </p>
-      <DetailBtn>더 자세히 알고 싶어요!</DetailBtn>
+      <GoToDetailBtn>더 자세히 알고 싶어요!</GoToDetailBtn>
     </TextWrapper>
   );
 };
@@ -24,7 +24,7 @@ const TextWrapper = styled.div`
     margin-right: 30px;
   }
 `;
-const DetailBtn = styled.button`
+const GoToDetailBtn = styled.button`
   color: white;
   background-color: #9450e7;
   border: 2px solid black;

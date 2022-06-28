@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import BannerText from "./component/BannerText";
-
 import MainCarousel from "./component/MainCarousel";
-
 import reset from "styled-reset";
 import { darkTheme, lightTheme } from "./theme";
 
@@ -16,17 +14,16 @@ ${reset}
 
 const Main = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [lightState, setLightState] = useState(false);
+  const [lightStateText, setLightStateText] = useState(false);
 
-  const onOffDarkMode = () => {
+  const aboutOnOffDarkMode = () => {
     setIsDarkMode((prev) => !prev);
-    setLightState((prev) => !prev);
+    setLightStateText((prev) => !prev);
   };
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <GlobalStyle />
-
       <MainWrapper>
         <img
           src="https://cdn.pixabay.com/photo/2019/07/21/13/02/great-pyrenees-4352728_1280.jpg"
@@ -34,8 +31,8 @@ const Main = () => {
         ></img>
         <BannerText />
         <MainCarousel />
-        <ModeBtn onClick={onOffDarkMode}>
-          {lightState ? "주간모드" : "야간모드"}
+        <ModeBtn onClick={aboutOnOffDarkMode}>
+          {lightStateText ? "주간모드" : "야간모드"}
         </ModeBtn>
       </MainWrapper>
     </ThemeProvider>

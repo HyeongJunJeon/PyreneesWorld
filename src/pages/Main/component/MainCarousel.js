@@ -5,13 +5,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const MainCarousel = () => {
-  const [data, setData] = useState([]);
+  const [carouselData, setCarouselData] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/data/carouselData.json")
       .then((res) => res.json())
       .then((data) => {
-        setData(data);
+        setCarouselData(data);
       });
   }, []);
 
@@ -30,7 +30,7 @@ const MainCarousel = () => {
 
       <Wrap>
         <Slider {...settings}>
-          {data.map((data) => {
+          {carouselData.map((data) => {
             return (
               <DogInfo key={data.id}>
                 <img className="carouselImg" src={data.image_url} alt="dog" />
@@ -57,7 +57,8 @@ const Wrap = styled.div`
   margin: 0 auto;
   width: 710px;
 
-  .slick-prev:before {
+  .slick-prev:before,
+  .slick-next:before {
     opacity: 1;
     color: black;
     position: relative;
@@ -65,10 +66,6 @@ const Wrap = styled.div`
     right: 100px;
   }
   .slick-next:before {
-    opacity: 1;
-    color: black;
-    position: relative;
-    top: 150px;
     right: 750px;
   }
 `;
