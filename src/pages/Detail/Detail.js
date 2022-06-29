@@ -18,8 +18,8 @@ const Detail = () => {
   return (
     <Wrapper>
       <img src={detailData.image_url} alt="dog" />
-      <p>이름: {detailData.name}</p>
-      <p>설명: {detailData.text}</p>
+      <DogName>이름: {detailData.name}</DogName>
+      <DogInfo>설명: {detailData.text}</DogInfo>
 
       <Commnet />
     </Wrapper>
@@ -38,4 +38,13 @@ const Wrapper = styled.div`
     width: 300px;
     border-radius: 50%;
   }
+`;
+
+const DogName = styled.p`
+  margin: 20px;
+`;
+
+const DogInfo = styled(DogName)`
+  color: #676767;
+  font-size: 25px;
 `;

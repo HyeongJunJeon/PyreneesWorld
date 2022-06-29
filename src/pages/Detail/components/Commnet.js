@@ -24,18 +24,18 @@ const Commnet = () => {
         ))}
       </Wrapper>
       <>
-        <input
+        <AddComment
           type="text"
           placeholder="댓글을 입력해 주세요!"
           onChange={(e) => {
             setComment(e.target.value);
           }}
           value={comment}
-        />
+        ></AddComment>
 
-        <button type="button" onClick={post}>
+        <PostBtn type="button" onClick={post}>
           게시
-        </button>
+        </PostBtn>
       </>
     </>
   );
@@ -52,13 +52,29 @@ const Wrapper = styled.div`
 
 const CommentWrapper = styled.div`
   display: flex;
-  padding-left: 20px;
+  padding: 20px;
 `;
 
 const UserName = styled.p`
-  font-size: 15px;
+  font-size: 20px;
 `;
 
 const CommentText = styled(UserName)`
   margin-left: 50px;
+`;
+
+const AddComment = styled.input`
+  margin-top: 10px;
+  width: 400px;
+  height: 40px;
+  text-align: center;
+`;
+
+const PostBtn = styled.button`
+  margin-left: 10px;
+  width: 60px;
+  height: 40px;
+  color: white;
+  background-color: #9450e7;
+  border-radius: 5px;
 `;

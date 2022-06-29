@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { PC } from "../MediaQuery";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,13 +21,25 @@ const MainCarousel = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+
+    responsive: [
+      {
+        breakpoint: 880,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+        },
+      },
+    ],
   };
   return (
     <Wrapper>
-      <InfoText>
-        피레니즈 월드의
-        <br /> 장난꾸러기들!
-      </InfoText>
+      <PC>
+        <InfoText>
+          피레니즈 월드의
+          <br /> 장난꾸러기들!
+        </InfoText>
+      </PC>
 
       <Wrap>
         <Slider {...settings}>
@@ -35,7 +48,7 @@ const MainCarousel = () => {
               <DogInfo key={data.id}>
                 <img className="carouselImg" src={data.image_url} alt="dog" />
                 <p>{data.name}</p>
-                <p>{data.text}</p>
+                <p className="carouselText">{data.text}</p>
               </DogInfo>
             );
           })}
@@ -47,6 +60,7 @@ const MainCarousel = () => {
 
 export default MainCarousel;
 const Wrapper = styled.div`
+  max-width: 1350px;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
@@ -54,7 +68,6 @@ const Wrapper = styled.div`
 `;
 
 const Wrap = styled.div`
-  margin: 0 auto;
   width: 710px;
 
   .slick-prev:before,
@@ -75,11 +88,14 @@ const InfoText = styled.div`
   font-size: 36px;
   padding-top: 20px;
   padding-left: 30px;
+
+  /* @media screen and (max-width: 880px) {
+    display: none;
+  } 이런식으로 줄수도 있고, react-responsive사용 할수도 있고, 무엇이 편한지는 본인판단일 것 같다.*/
 `;
 
 const DogInfo = styled.div`
   border-left: 1px solid gainsboro;
-  width: 320px;
   text-align: center;
   font-size: 30px;
   .carouselImg {
@@ -87,5 +103,14 @@ const DogInfo = styled.div`
     width: 180px;
     height: 180px;
     border-radius: 5px;
+
+    @media screen and (max-width: 880px) {
+      width: 300px;
+    }
+  }
+  .carouselText {
+    margin: 20px auto;
+    font-size: 20px;
+    color: #676767;
   }
 `;
