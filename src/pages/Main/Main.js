@@ -8,7 +8,7 @@ const Main = () => {
     <MainWrapper>
       <img
         src="https://cdn.pixabay.com/photo/2019/07/21/13/02/great-pyrenees-4352728_1280.jpg"
-        alt="pupppy"
+        alt="puppy"
       ></img>
       <BannerText />
       <MainCarousel />
